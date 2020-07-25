@@ -17,11 +17,261 @@
     <link rel="stylesheet" href="vendors/fontawesome-free-5.14.0-web/css/all.min.css">
     <!-- Toastr Notifications -->
     <link rel="stylesheet" href="vendors/toastr-notifications/toastr.min.css">
+    <!-- CustomScrollbar -->
+    <link rel="stylesheet" href="vendors/CustomScrollbar/jquery.mCustomScrollbar.min.css">
     <!-- style css of system report -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+</head>
+
+<body>
+    <div class="page-wrapper default-theme sidebar-bg bg1 toggled border-radius-on">
+        <nav id="sidebar" class="sidebar-wrapper sidebar-wrapper-shadow">
+            <div class="sidebar-content">
+                <!-- sidebar-brand-->
+                <div class="sidebar-item sidebar-brand">
+                    <a href="#"> System Report V1</a>
+                </div>
+                <!-- sidebar-header-->
+                <div class="sidebar-item sidebar-header d-flex flex-nowrap">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" src="/assets/img/icons/avatar.png" alt="User picture">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Evans
+                            <strong>Coding</strong>
+                        </span>
+                        <span class="user-role">Administrator</span>
+                        <span class="user-status">
+                            <i class="fa fa-circle" style="color: #32d332;"></i>
+                            <span>Online</span>
+                        </span>
+                    </div>
+                </div>
+                <!--sidebar-menu-->
+                <div class="sidebar-item sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>TIỆN ÍCH</span>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/confetti_32px.png" alt="">
+                                        <span class="menu-text">Thông báo, sự kiện</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/faq_32px.png" alt="">
+                                        <span class="menu-text">Hỏi, đáp</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="header-menu">
+                            <span>BÁO CÁO</span>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/agreement_32px.png" alt="">
+                                        <span class="menu-text">Dự thảo báo cáo</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/doughnut_chart_32px.png" alt="">
+                                        <span class="menu-text">Kiểm duyệt báo cáo</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/edit_graph_report_32px.png" alt="">
+                                        <span class="menu-text">Tổng hợp báo cáo</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/google_presentation_32px.png" alt="">
+                                        <span class="menu-text">Kết xuất báo cáo</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/genealogy_32px.png" alt="">
+                                        <span class="menu-text">Theo dõi tình trạng báo cáo</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/report_card_32px.png" alt="">
+                                        <span class="menu-text">Xuất bản dữ liệu</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/spreadsheet_32px.png" alt="">
+                                        <span class="menu-text">Tra cứu dữ liệu công bố</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/timeline_32px.png" alt="">
+                                        <span class="menu-text">Thống kê dữ liệu</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-menu">
+                            <span>QUẢN TRỊ - PHÂN QUYỀN</span>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/system_information_32px.png" alt="">
+                                        <span class="menu-text">Quản trị đơn vị</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/crowd_32px.png" alt="">
+                                        <span class="menu-text">Quản trị người dùng</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/outline_32px.png" alt="">
+                                        <span class="menu-text">Thiết kế mẫu biểu</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/reports/maintenance_32px.png" alt="">
+                                        <span class="menu-text">Phân quyền sử dụng</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--sidebar-footer-->
+            <div class="sidebar-footer">
+                <div class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-bell"></i>
+                        <span class="badge badge-pill badge-warning notification">3</span>
+                    </a>
+                    <div class="dropdown-menu notifications" arial-labelledby="dropdownMenuMessage">
+                        <div class="notifications-header">
+                            <i class="fa fa-bell"></i> Thông báo
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <div class="notification-content">
+                                <div class="icon">
+                                    <i class="fas fa-check text-success border border-success"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="notification-detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex ut illo dicta voluptas nisi natus aperiam velit ratione corrupti eligendi unde quo, et voluptatum asperiores in modi quidem, amet quaerat.</div>
+                                    <div class="notification-time">
+                                        6 minutes ago
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="notification-content">
+                                <div class="icon">
+                                    <i class="fas fa-exclamation text-info border border-info"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="notification-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor minus atque pariatur similique doloremque minima cumque tempore laborum. Impedit aliquid error nobis iusto consequuntur dolorem illo, recusandae veniam
+                                        cum tempore?</div>
+                                    <div class="notification-time">
+                                        Today
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="notification-content">
+                                <div class="icon">
+                                    <i class="fas fa-exclamation-triangle text-warning border border-warning"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="notification-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor minus atque pariatur similique doloremque minima cumque tempore laborum. Impedit aliquid error nobis iusto consequuntur dolorem illo, recusandae veniam
+                                        cum tempore?</div>
+                                    <div class="notification-time">
+                                        Today
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item text-center">Xem tất cả thông báo</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-envelope"> </i>
+                        <span class="badge badge-pill badge-success notification">7</span>
+                    </a>
+                    <div class="dropdown-menu messages" aria-labelledby="dropdownMenuMessage">
+                        <div class="messages-header">
+                            <i class="fa fa-envelope"> </i> Tin nhắn
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <a href="#" class="dropdown-item">
+                            <div class="message-content">
+                                <div class="pic">
+                                    <img src="/assets/img/icons/avatar.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="message-title">
+                                        <strong>Evans</strong>
+                                    </div>
+                                    <div class="message-detail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel explicabo, sint facilis id dolores numquam maxime, eveniet illo dolorem esse omnis odit voluptates! Soluta saepe quod quam aperiam! Est, excepturi!
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item text-center">Xem tất cả tin nhắn </a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-cog"></i>
+                        <span class="badge-sonar"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuMessage">
+                        <a href="#" class="dropdown-item">Trang cá nhân</a>
+                        <a href="#" class="dropdown-item">Hỗ trợ</a>
+                        <a href="#" class="dropdown-item">Tài liệu HDSD</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">
+                        <i class="fa fa-power-off"></i>
+                    </a>
+                </div>
+                <div class="pinned-footer">
+                    <a href="#">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     <!-- Script -->
     <script type="text/javascript" src="vendors/jquery-3.5.1.min.js"></script>
+    <!-- Popper -->
+    <script type="text/javascript" src="vendors/popper.min.js"></script>
     <!-- Bootstrap 4.5.0 -->
     <script type="text/javascript" src="vendors/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
     <!-- Fontawesome Free 5.14.0 web -->
@@ -30,12 +280,11 @@
     <script type="text/javascript" src="vendors/toastr-notifications/toastr.min.js"></script>
     <!-- Sweetalert -->
     <script type="text/javascript" src="vendors/sweetalert.min.js"></script>
+    <!-- Custom Scrollbar -->
+    <script type="text/javascript" src="vendors/CustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
     <!-- main js of system report -->
     <script type="text/javascript" src="assets/js/main.js"></script>
-</head>
-
-<body>
-    á
 </body>
 
 </html>
