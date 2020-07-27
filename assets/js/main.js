@@ -29,34 +29,45 @@ jQuery(function($) {
             }
         }
         scrollSidebar();
-
+        // var w = $(document).height();
+        // console.log(w);
+        // $('.main-content').css("height", w - 38)
     });
-    $(window).resize(function() {
-        let width = $(window).width();
-        if (width < 768) {
-            if (!$(".page-wrapper").hasClass("pinned")) {
-                $(".page-wrapper").addClass("pinned");
-                $("#sidebar").hover(
-                    function() {
-                        console.log("mouseenter");
-                        $(".page-wrapper").addClass("sidebar-hovered");
-                    },
-                    function() {
-                        console.log("mouseout");
-                        $(".page-wrapper").removeClass("sidebar-hovered");
-                    }
-                );
-            }
-        } else {
-            if ($(".page-wrapper").hasClass("pinned")) {
-                // unpin sidebar when hovered
-                $(".page-wrapper").removeClass("pinned");
-                $("#sidebar").unbind("hover");
-            }
+    // $(window).resize(function() {
+    //     let width = $(window).width();
+    //     if (width < 768) {
+    //         if (!$(".page-wrapper").hasClass("pinned")) {
+    //             $(".page-wrapper").addClass("pinned");
+    //             $("#sidebar").hover(
+    //                 function() {
+    //                     console.log("mouseenter");
+    //                     $(".page-wrapper").addClass("sidebar-hovered");
+    //                 },
+    //                 function() {
+    //                     console.log("mouseout");
+    //                     $(".page-wrapper").removeClass("sidebar-hovered");
+    //                 }
+    //             );
+    //         }
+    //     } else {
+    //         if ($(".page-wrapper").hasClass("pinned")) {
+    //             // unpin sidebar when hovered
+    //             $(".page-wrapper").removeClass("pinned");
+    //             $("#sidebar").unbind("hover");
+    //         }
+    //     }
+    //     scrollSidebar();
+    // });
+    $(window).scroll(function(e) {
+        var $el = $('.fixedElement');
+        var isPositionFixed = ($el.css('position') == 'fixed');
+        if ($(this).scrollTop() > 200 && !isPositionFixed) {
+            $el.css({ 'position': 'fixed', 'top': '0px' });
         }
-        scrollSidebar();
+        if ($(this).scrollTop() < 200 && isPositionFixed) {
+            $el.css({ 'position': 'static', 'top': '0px' });
+        }
     });
-
     $(".sidebar-dropdown > a").click(function() {
         $(".sidebar-submenu").slideUp(200);
         if ($(this).parent().hasClass("active")) {
@@ -74,26 +85,26 @@ jQuery(function($) {
         $(".page-wrapper").toggleClass("toggled");
     });
 
-    $("#pin-sidebar").click(function() {
-        if ($(".page-wrapper").hasClass("pinned")) {
-            // unpin sidebar when hovered
-            $(".page-wrapper").removeClass("pinned");
-            $("#sidebar").unbind("hover");
-        } else {
-            $(".page-wrapper").addClass("pinned");
-            $("#sidebar").hover(
-                function() {
-                    console.log("mouseenter");
-                    $(".page-wrapper").addClass("sidebar-hovered");
-                },
-                function() {
-                    console.log("mouseout");
-                    $(".page-wrapper").removeClass("sidebar-hovered");
-                }
-            );
+    // $("#pin-sidebar").click(function() {
+    //     if ($(".page-wrapper").hasClass("pinned")) {
+    //         // unpin sidebar when hovered
+    //         $(".page-wrapper").removeClass("pinned");
+    //         $("#sidebar").unbind("hover");
+    //     } else {
+    //         $(".page-wrapper").addClass("pinned");
+    //         $("#sidebar").hover(
+    //             function() {
+    //                 console.log("mouseenter");
+    //                 $(".page-wrapper").addClass("sidebar-hovered");
+    //             },
+    //             function() {
+    //                 console.log("mouseout");
+    //                 $(".page-wrapper").removeClass("sidebar-hovered");
+    //             }
+    //         );
 
-        }
-    });
+    //     }
+    // });
 
 
     function scrollSidebar() {
@@ -101,7 +112,12 @@ jQuery(function($) {
             $(".sidebar-content").mCustomScrollbar({
                 axis: "y",
                 autoHideScrollbar: true,
-                scrollInertia: 300
+                scrollInertia: 100
+            });
+            $(".main-content").mCustomScrollbar({
+                axis: "y",
+                autoHideScrollbar: true,
+                scrollInertia: 100
             });
             $(".sidebar-content").addClass("desktop");
         }
