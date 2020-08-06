@@ -227,10 +227,10 @@ body {
 
 .sidebar-wrapper {
     /* width: 16%; */
-    min-width: 16%;
+    /* min-width: 16%; */
     width: 18%;
     height: 100%;
-    max-width: 18%;
+    /* max-width: 18%; */
     position: fixed;
     /* top: 0; */
     /* left: -280px; */
@@ -504,22 +504,6 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-
-
-/* .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
-    content: "\f111";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-    font-style: normal;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-right: 10px;
-    font-size: 8px;
-
-} */
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .badge,
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .label {
@@ -953,7 +937,6 @@ body {
 
 .mCSB_dragger_bar {
     background-color: #ccc !important;
-    /* color of the dragger bar */
 }
 
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
@@ -970,10 +953,6 @@ body {
 .page-wrapper>.content {
     position: absolute;
     display: inline-block;
-    /* min-width: 84%; */
-    width: 82%;
-    max-width: 82%;
-    /* height: 100vh !important; */
     background-color: #F7F5F7;
     overflow-y: scroll;
     padding: 0 4px;
@@ -1022,13 +1001,189 @@ body {
 .page-wrapper>.content .main-content {
     padding-left: 8px;
     padding-right: 2px;
+    overflow-y: auto;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding: 4px 0;
+    padding-bottom: 60px;
 }
 
-#footer1 {
-    position: fixed;
-    bottom: 0;
-    background-color: red;
-    color: white;
+.page-wrapper>.content .main-content .list-content-notification .item-content-notification {
+    margin: 4px 0px;
+    height: 110px;
+    padding: 0px 10px;
+}
+
+.page-wrapper>.content .main-content .list-content-notification .item-content-notification img {
+    /* width: auto; */
+    height: inherit;
+    vertical-align: middle;
+    display: inline;
+}
+
+.page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification {
+    font-size: 13px;
+    /* padding: 20px; */
+    margin-left: 10px;
+    width: 70%;
+}
+
+.page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification .text-title-content-notification {
+    /* width: 50px; */
+    font-size: 16px;
+    height: 18px;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+}
+
+.page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification {
+    display: inline-block;
+}
+
+.page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification .text-title-content-notification {
+    color: #4d699e;
+}
+
+.page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification span img {
+    width: 20px;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    width: 100%;
     height: 34px;
-    width: inherit;
+    background-color: rgb(248, 246, 246);
+    z-index: 9;
+}
+
+.footer-copyright>div {
+    position: absolute;
+    right: 20px;
+    padding-top: 10px;
+}
+
+.footer-copyright>div>a {
+    text-decoration: none;
+}
+
+
+/* shadow css */
+
+.shadow-item {
+    background: #fff;
+    position: relative;
+}
+
+.shadow-item-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.shadow-item-1:hover {
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.shadow-item-2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+#modalNotification .modal-body {
+    font-size: 14px;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 1840px) {
+    .page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification span {
+        display: none;
+    }
+    .page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification a {
+        display: none;
+    }
+    .page-wrapper>.content .main-content .list-content-notification .item-content-notification .title-content-notification {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .sidebar-wrapper {
+        width: 13%;
+    }
+    .page-wrapper>.content {
+        width: 87%;
+    }
+    .page-wrapper>.content .main-content .list-content-notification .item-content-notification {
+        height: 110px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .page-wrapper>.content .main-content .list-content-notification .item-content-notification {
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .sidebar-wrapper {
+        width: 18%;
+    }
+    .page-wrapper>.content {
+        width: 82%;
+    }
+    .page-wrapper>.content .main-content .list-content-notification .item-content-notification {
+        height: 110px;
+    }
+}
+
+
+/* css Department */
+
+.list-group-item {
+    border: none;
+}
+
+.form-department {
+    margin-left: 2px;
+    height: 500px;
+    padding: 14px;
+    overflow: auto;
+}
+
+.form-department .title-form-group {
+    font-weight: bold;
+    margin: 0;
+}
+
+.form-department .department-component {
+    margin-top: 16px;
+}
+
+.form-department .department-component .btn {
+    width: 80px;
+}
+
+.form-department .department-component textarea {
+    height: 80px;
 }

@@ -85,41 +85,27 @@ jQuery(function($) {
         $(".page-wrapper").toggleClass("toggled");
     });
 
-    // $("#pin-sidebar").click(function() {
-    //     if ($(".page-wrapper").hasClass("pinned")) {
-    //         // unpin sidebar when hovered
-    //         $(".page-wrapper").removeClass("pinned");
-    //         $("#sidebar").unbind("hover");
-    //     } else {
-    //         $(".page-wrapper").addClass("pinned");
-    //         $("#sidebar").hover(
-    //             function() {
-    //                 console.log("mouseenter");
-    //                 $(".page-wrapper").addClass("sidebar-hovered");
-    //             },
-    //             function() {
-    //                 console.log("mouseout");
-    //                 $(".page-wrapper").removeClass("sidebar-hovered");
-    //             }
-    //         );
-
-    //     }
-    // });
-
 
     function scrollSidebar() {
         if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             $(".sidebar-content").mCustomScrollbar({
                 axis: "y",
                 autoHideScrollbar: true,
-                scrollInertia: 100
+                scrollInertia: 300
             });
             $(".main-content").mCustomScrollbar({
                 axis: "y",
-                autoHideScrollbar: true,
-                scrollInertia: 100
+                autoHideScrollbar: false,
+                scrollInertia: 300
             });
+            $("#modalNotification .modal-body").mCustomScrollbar({
+                axis: "y",
+                autoHideScrollbar: true,
+                scrollInertia: 300
+            });
+
             $(".sidebar-content").addClass("desktop");
         }
+
     }
 });
